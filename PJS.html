@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personajes de The Binding of Isaac — Isaac, Magdalene, Cain, Judas, Eve y más." />
+  <title>Personajes — The Binding of Isaac</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Caveat:wght@400;600;700&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Lightbox overlays — deben ir antes del header para que :target funcione -->
+<div id="lb-isaac" class="lb-overlay">
+  <a href="#galeria" class="lb-close" aria-label="Cerrar">✕</a>
+  <figure class="lb-figure">
+    <img src="imgns/isaacc.webp" alt="Isaac — el protagonista" />
+    <figcaption>Isaac — El niño lloroso. Su única arma son sus lágrimas.</figcaption>
+  </figure>
+</div>
+<div id="lb-magdalene" class="lb-overlay">
+  <a href="#galeria" class="lb-close" aria-label="Cerrar">✕</a>
+  <figure class="lb-figure">
+    <img src="imgns/magdalene.webp" alt="Magdalene — la vecina hambrienta" />
+    <figcaption>Magdalene — Siempre hambrienta, siempre soñando.</figcaption>
+  </figure>
+</div>
+<div id="lb-cain" class="lb-overlay">
+  <a href="#galeria" class="lb-close" aria-label="Cerrar">✕</a>
+  <figure class="lb-figure">
+    <img src="imgns/cain.webp" alt="Cain — el traidor con suerte" />
+    <figcaption>Cain — Lleva una venda en un ojo y un dado en la mano.</figcaption>
+  </figure>
+</div>
+<div id="lb-judas" class="lb-overlay">
+  <a href="#galeria" class="lb-close" aria-label="Cerrar">✕</a>
+  <figure class="lb-figure">
+    <img src="imgns/judas.webp" alt="Judas — el que abraza la oscuridad" />
+    <figcaption>Judas — Débil al inicio, devastador al final.</figcaption>
+  </figure>
+</div>
+<div id="lb-eve" class="lb-overlay">
+  <a href="#galeria" class="lb-close" aria-label="Cerrar">✕</a>
+  <figure class="lb-figure">
+    <img src="imgns/eve.webp" alt="Eve — la chica del pájaro muerto" />
+    <figcaption>Eve — Cuanto menos tiene, más peligrosa se vuelve.</figcaption>
+  </figure>
+</div>
+<div id="lb-samson" class="lb-overlay">
+  <a href="#galeria" class="lb-close" aria-label="Cerrar">✕</a>
+  <figure class="lb-figure">
+    <img src="imgns/samson.webp" alt="Samson — la furia en persona" />
+    <figcaption>Samson — Cada golpe recibido lo vuelve más furioso.</figcaption>
+  </figure>
+</div>
+
+<!-- ENCUADERNACIÓN -->
+<div class="page-spine" aria-hidden="true"></div>
+<div class="spine-holes" aria-hidden="true">
+  <span></span><span></span><span></span>
+  <span></span><span></span><span></span>
+  <span></span><span></span>
+</div>
+
+<!-- HEADER (idéntico al de index.html — cámbialo en todas las páginas igual) -->
+<header class="site-header" role="banner">
+  <input type="checkbox" id="nav-check" class="nav-check" aria-hidden="true" />
+  <div class="header-bar">
+    <a href="index.html" class="site-logo" aria-label="The Binding of Isaac — Inicio">
+      <div class="isaac-face" aria-hidden="true">
+        <div class="if-head">
+          <div class="if-eyes"><span class="if-eye left"></span><span class="if-eye right"></span></div>
+          <div class="if-tears"><span class="if-tear"></span><span class="if-tear"></span></div>
+          <span class="if-mouth"></span>
+        </div>
+      </div>
+      <div class="logo-text">
+        <span class="logo-main">The Binding</span>
+        <span class="logo-sub">of Isaac</span>
+      </div>
+    </a>
+    <label for="nav-check" class="hb-btn" aria-label="Abrir o cerrar menú">
+      <span class="hb-bar"></span><span class="hb-bar"></span><span class="hb-bar"></span>
+    </label>
+  </div>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <ul class="nav-list" role="list">
+      <li class="nav-item"><a href="index.html" class="nav-link"><label for="nav-check">Inicio</label></a></li>
+      <li class="nav-item has-drop">
+        <a href="PJS.html" class="nav-link active" aria-current="page" aria-haspopup="true">
+          Personajes <span class="drop-arrow" aria-hidden="true">▾</span>
+        </a>
+        <ul class="drop-menu" role="list">
+          <li><a href="#isaac"     class="drop-link">Isaac</a></li>
+          <li><a href="#magdalene" class="drop-link">Magdalene</a></li>
+          <li><a href="#cain"      class="drop-link">Cain</a></li>
+          <li><a href="#judas"     class="drop-link">Judas</a></li>
+          <li><a href="#eve"       class="drop-link">Eve</a></li>
+          <li><a href="#samson"    class="drop-link">Samson</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-drop">
+        <a href="pisos.html" class="nav-link" aria-haspopup="true">
+          Pisos <span class="drop-arrow" aria-hidden="true">▾</span>
+        </a>
+        <ul class="drop-menu" role="list">
+          <li><a href="pisos.html#basement" class="drop-link">The Basement</a></li>
+          <li><a href="pisos.html#caves"    class="drop-link">The Caves</a></li>
+          <li><a href="pisos.html#depths"   class="drop-link">The Depths</a></li>
+          <li><a href="pisos.html#womb"     class="drop-link">The Womb</a></li>
+          <li><a href="pisos.html#sheol"    class="drop-link">Sheol / Cathedral</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="contacto.html" class="nav-link"><label for="nav-check">Contacto</label></a></li>
+    </ul>
+  </nav>
+</header>
+<label for="nav-check" class="nav-overlay" aria-hidden="true"></label>
+
+
+<main id="main-content">
+
+  <!-- HERO de página -->
+  <section class="hero" style="min-height:38vh;" aria-labelledby="pjs-hero-title">
+    <div class="hero-doodles" aria-hidden="true">
+      <span class="doodle d-cross" style="opacity:.06;">✝</span>
+      <span class="doodle d-skull" style="opacity:.07;">☠</span>
+    </div>
+    <div class="hero-body">
+      <p class="hero-eyebrow">Las Almas Perdidas</p>
+      <h1 id="pjs-hero-title" class="hero-title" style="font-size:clamp(2.4rem,8vw,5rem);">
+        Personajes<span>del Sótano</span>
+      </h1>
+      <p class="hero-desc" style="font-size:1rem;">
+        Cada personaje es una perspectiva diferente del mismo infierno. Elige tu ruina con cuidado.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- GALERÍA INTERACTIVA (:target lightbox) -->
+  <section id="galeria" class="section" aria-labelledby="gal-title">
+    <div class="container">
+
+      <header class="sec-header">
+        <span class="sec-tag">Galería</span>
+        <h2 id="gal-title" class="sec-title">Retratos del Sótano</h2>
+        <div class="sec-squiggle"></div>
+        <p class="sec-desc">Haz clic en cualquier imagen para verla en grande.</p>
+      </header>
+
+      <div class="gallery-grid">
+        <figure class="gal-item">
+          <a href="#lb-isaac" aria-label="Ver retrato de Isaac"><img src="imgns/isaac" alt="Isaac llorando en el sótano" loading="lazy" /></a>
+          <figcaption>Isaac</figcaption>
+        </figure>
+        <figure class="gal-item">
+          <a href="#lb-magdalene" aria-label="Ver retrato de Magdalene"><img src="imgns/magdalene.webp" alt="Magdalene con su peluche" loading="lazy" /></a>
+          <figcaption>Magdalene</figcaption>
+        </figure>
+        <figure class="gal-item">
+          <a href="#lb-cain" aria-label="Ver retrato de Cain"><img src="imgns/cain.webp" alt="Cain en la oscuridad" loading="lazy" /></a>
+          <figcaption>Cain</figcaption>
+        </figure>
+        <figure class="gal-item gal-item--wide">
+          <a href="#lb-judas" aria-label="Ver retrato de Judas"><img src="imgns/judas.webp" alt="Judas con el grimorio oscuro" loading="lazy" /></a>
+          <figcaption>Judas</figcaption>
+        </figure>
+        <figure class="gal-item">
+          <a href="#lb-eve" aria-label="Ver retrato de Eve"><img src="imgns/eve.webp" alt="Eve con Whore of Babylon" loading="lazy" /></a>
+          <figcaption>Eve</figcaption>
+        </figure>
+        <figure class="gal-item">
+          <a href="#lb-samson" aria-label="Ver retrato de Samson"><img src="imgns/samson.webp" alt="Samson en modo furia" loading="lazy" /></a>
+          <figcaption>Samson</figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FICHAS DE PERSONAJES -->
+  <section class="section section-alt" aria-labelledby="chars-title">
+    <div class="container">
+
+      <header class="sec-header">
+        <span class="sec-tag">Fichas</span>
+        <h2 id="chars-title" class="sec-title">Los Condenados</h2>
+        <div class="sec-squiggle"></div>
+      </header>
+
+      <div class="char-grid">
+
+        <!-- Isaac -->
+        <article id="isaac" class="char-card">
+          <div class="char-img-wrap">
+            <img src="imgns/isaac.webp" alt="Isaac" loading="lazy" />
+          </div>
+          <div class="char-body">
+            <h3 class="char-name">Isaac</h3>
+            <div class="char-stats" aria-label="Stats de Isaac">
+              <span class="stat-pill">❤️ 3 corazones</span>
+              <span class="stat-pill">💧 Lágrimas normales</span>
+              <span class="stat-pill">Ítem: D6</span>
+            </div>
+            <p class="char-desc">
+              El protagonista. Un niño asustado cuyas lágrimas son su única arma. Comienza con el D6 a partir de <em>Afterbirth</em>, lo que lo convierte en el personaje más versátil para rerollear ítems. Su historia es el núcleo de todo el lore.
+            </p>
+          </div>
+        </article>
+
+        <!-- Magdalene -->
+        <article id="magdalene" class="char-card">
+          <div class="char-img-wrap">
+            <img src="imgns/magdalene.webp" alt="Magdalene" loading="lazy" />
+          </div>
+          <div class="char-body">
+            <h3 class="char-name">Magdalene</h3>
+            <div class="char-stats" aria-label="Stats de Magdalene">
+              <span class="stat-pill">❤️ 4 corazones</span>
+              <span class="stat-pill">🐻 Ítem: Yum Heart</span>
+              <span class="stat-pill">Velocidad: lenta</span>
+            </div>
+            <p class="char-desc">
+              La vecina de Isaac. Tiene más vida que nadie pero se mueve con lentitud. Su ítem inicial le permite regenerar corazones. Su historia habla de una infancia marcada por el descuido y el hambre afectiva.
+            </p>
+          </div>
+        </article>
+
+        <!-- Cain -->
+        <article id="cain" class="char-card">
+          <div class="char-img-wrap">
+            <img src="imgns/cain.webp" alt="Cain" loading="lazy" />
+          </div>
+          <div class="char-body">
+            <h3 class="char-name">Cain</h3>
+            <div class="char-stats" aria-label="Stats de Cain">
+              <span class="stat-pill">❤️ 2 corazones</span>
+              <span class="stat-pill">🎲 Ítem: Lucky Foot</span>
+              <span class="stat-pill">Daño: alto</span>
+            </div>
+            <p class="char-desc">
+              Lleva una venda en el ojo izquierdo y la culpa de algo que no puede recordar. La suerte es su aliada: su Lucky Foot convierte las monedas malas en buenas. Alto daño base desde el inicio, pero poca vida.
+            </p>
+          </div>
+        </article>
+
+        <!-- Judas -->
+        <article id="judas" class="char-card">
+          <div class="char-img-wrap">
+            <img src="imgns/judas.webp" alt="Judas" loading="lazy" />
+          </div>
+          <div class="char-body">
+            <h3 class="char-name">Judas</h3>
+            <div class="char-stats" aria-label="Stats de Judas">
+              <span class="stat-pill">❤️ 1 corazón</span>
+              <span class="stat-pill">📖 Ítem: Book of Belial</span>
+              <span class="stat-pill">Daño: máximo</span>
+            </div>
+            <p class="char-desc">
+              El traidor bíblico encarnado. Empieza con solo un corazón de vida pero con el mayor daño base del juego. Su libro triplica el daño al usarlo. Es el personaje más arriesgado y más poderoso al mismo tiempo.
+            </p>
+          </div>
+        </article>
+
+        <!-- Eve -->
+        <article id="eve" class="char-card">
+          <div class="char-img-wrap">
+            <img src="imgns/eve.webp" alt="Eve" loading="lazy" />
+          </div>
+          <div class="char-body">
+            <h3 class="char-name">Eve</h3>
+            <div class="char-stats" aria-label="Stats de Eve">
+              <span class="stat-pill">❤️ 2 corazones</span>
+              <span class="stat-pill">🐦 Ítem: Dead Bird</span>
+              <span class="stat-pill">Ítem: Whore of Babylon</span>
+            </div>
+            <p class="char-desc">
+              Cuanto más daño recibe, más poderosa se vuelve. Whore of Babylon se activa al llegar a medio corazón, convirtiéndola en una versión demoníaca de sí misma. Su pájaro muerto la acompaña siempre.
+            </p>
+          </div>
+        </article>
+
+        <!-- Samson -->
+        <article id="samson" class="char-card">
+          <div class="char-img-wrap">
+            <img src="imgns/samson.webp" alt="Samson" loading="lazy" />
+          </div>
+          <div class="char-body">
+            <h3 class="char-name">Samson</h3>
+            <div class="char-stats" aria-label="Stats de Samson">
+              <span class="stat-pill">❤️ 3 corazones</span>
+              <span class="stat-pill">💢 Ítem: Bloody Lust</span>
+              <span class="stat-pill">Furia acumulativa</span>
+            </div>
+            <p class="char-desc">
+              Cada vez que recibe daño, su daño aumenta permanentemente durante esa habitación. Bloody Lust es su ítem único: la rabia se convierte en fuerza. Un personaje que premia el juego agresivo y arriesgado.
+            </p>
+          </div>
+        </article>
+
+      </div><!-- /char-grid -->
+    </div>
+  </section>
+
+</main>
+
+
+<!-- FOOTER (idéntico al de index.html) -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-rip" aria-hidden="true"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo" aria-label="Inicio">
+          <div class="isaac-face" aria-hidden="true" style="opacity:.7;">
+            <div class="if-head">
+              <div class="if-eyes"><span class="if-eye"></span><span class="if-eye"></span></div>
+              <div class="if-tears"><span class="if-tear"></span><span class="if-tear"></span></div>
+              <span class="if-mouth"></span>
+            </div>
+          </div>
+          <div class="logo-text">
+            <span class="logo-main" style="color:var(--p2);">The Binding</span>
+            <span class="logo-sub">of Isaac</span>
+          </div>
+        </a>
+        <p class="footer-tagline">Un sitio de fan hecho con lágrimas.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <h3>Páginas</h3>
+        <ul role="list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="PJS.html">Personajes</a></li>
+          <li><a href="pisos.html">Pisos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer-info">
+        <h3>Créditos</h3>
+        <p>Juego original de <strong>Edmund McMillen</strong></p>
+        <p class="footer-year">✝ 2011 — 2026 ✝</p>
+      </div>
+    </div>
+    <p class="footer-legal">The Binding of Isaac © Edmund McMillen &amp; Nicalis. Proyecto de fan no oficial.</p>
+  </div>
+</footer>
+
+</body>
+</html>

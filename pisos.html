@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Los pisos del sótano de The Binding of Isaac — Basement, Caves, Depths, Womb, Sheol." />
+  <title>Pisos — The Binding of Isaac</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Caveat:wght@400;600;700&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ENCUADERNACIÓN -->
+<div class="page-spine" aria-hidden="true"></div>
+<div class="spine-holes" aria-hidden="true">
+  <span></span><span></span><span></span>
+  <span></span><span></span><span></span>
+  <span></span><span></span>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <input type="checkbox" id="nav-check" class="nav-check" aria-hidden="true" />
+  <div class="header-bar">
+    <a href="index.html" class="site-logo" aria-label="The Binding of Isaac — Inicio">
+      <div class="isaac-face" aria-hidden="true">
+        <div class="if-head">
+          <div class="if-eyes"><span class="if-eye left"></span><span class="if-eye right"></span></div>
+          <div class="if-tears"><span class="if-tear"></span><span class="if-tear"></span></div>
+          <span class="if-mouth"></span>
+        </div>
+      </div>
+      <div class="logo-text">
+        <span class="logo-main">The Binding</span>
+        <span class="logo-sub">of Isaac</span>
+      </div>
+    </a>
+    <label for="nav-check" class="hb-btn" aria-label="Abrir o cerrar menú">
+      <span class="hb-bar"></span><span class="hb-bar"></span><span class="hb-bar"></span>
+    </label>
+  </div>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <ul class="nav-list" role="list">
+      <li class="nav-item"><a href="index.html" class="nav-link"><label for="nav-check">Inicio</label></a></li>
+      <li class="nav-item has-drop">
+        <a href="PJS.html" class="nav-link" aria-haspopup="true">
+          Personajes <span class="drop-arrow" aria-hidden="true">▾</span>
+        </a>
+        <ul class="drop-menu" role="list">
+          <li><a href="PJS.html#isaac"     class="drop-link">Isaac</a></li>
+          <li><a href="PJS.html#magdalene" class="drop-link">Magdalene</a></li>
+          <li><a href="PJS.html#cain"      class="drop-link">Cain</a></li>
+          <li><a href="PJS.html#judas"     class="drop-link">Judas</a></li>
+          <li><a href="PJS.html#eve"       class="drop-link">Eve</a></li>
+          <li><a href="PJS.html#samson"    class="drop-link">Samson</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-drop">
+        <a href="pisos.html" class="nav-link active" aria-current="page" aria-haspopup="true">
+          Pisos <span class="drop-arrow" aria-hidden="true">▾</span>
+        </a>
+        <ul class="drop-menu" role="list">
+          <li><a href="#basement" class="drop-link">The Basement</a></li>
+          <li><a href="#caves"    class="drop-link">The Caves</a></li>
+          <li><a href="#depths"   class="drop-link">The Depths</a></li>
+          <li><a href="#womb"     class="drop-link">The Womb</a></li>
+          <li><a href="#sheol"    class="drop-link">Sheol / Cathedral</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="contacto.html" class="nav-link"><label for="nav-check">Contacto</label></a></li>
+    </ul>
+  </nav>
+</header>
+<label for="nav-check" class="nav-overlay" aria-hidden="true"></label>
+
+
+<main id="main-content">
+
+  <!-- HERO de página -->
+  <section class="hero" style="min-height:38vh;" aria-labelledby="pisos-hero-title">
+    <div class="hero-doodles" aria-hidden="true">
+      <span class="doodle d-skull" style="font-size:3rem;opacity:.07;">☠</span>
+      <span class="doodle d-cross" style="opacity:.06;">✝</span>
+    </div>
+    <div class="hero-body">
+      <p class="hero-eyebrow">El Descenso</p>
+      <h1 id="pisos-hero-title" class="hero-title" style="font-size:clamp(2.4rem,8vw,5rem);">
+        Los Pisos<span>del Sótano</span>
+      </h1>
+      <p class="hero-desc" style="font-size:1rem;">
+        Cada capítulo es más profundo, más oscuro y más desesperado que el anterior.<br/>
+        El sótano no tiene fondo.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- CARDS DE PISOS — Vista general -->
+  <section class="section" aria-labelledby="floors-overview-title">
+    <div class="container">
+
+      <header class="sec-header">
+        <span class="sec-tag">Capítulos</span>
+        <h2 id="floors-overview-title" class="sec-title">Los Capítulos del Horror</h2>
+        <div class="sec-squiggle"></div>
+        <p class="sec-desc">Cada dos niveles forman un capítulo. Cada capítulo es una capa más profunda de la psique de Isaac.</p>
+      </header>
+
+      <div class="floors-grid">
+
+        <article id="basement" class="floor-card">
+          <span class="floor-icon" aria-hidden="true">🪦</span>
+          <h3 class="floor-name">The Basement / Cellar</h3>
+          <span class="floor-lvl">Capítulo 1 — Niveles 1-2</span>
+          <p>
+            El primer escalón del descenso. Húmedo, oscuro y lleno de moscas. Los enemigos más simples del juego habitan aquí: Flies, Pooters, Attack Flies. El ambiente es el de un sótano doméstico venido a menos, con cajas rotas y suciedad acumulada.
+          </p>
+          <p style="margin-top:.75rem; font-size:.88rem; color:var(--blood);">
+            <strong>Jefe principal:</strong> Monstro, Larry Jr., Gemini, Duke of Flies
+          </p>
+        </article>
+
+        <article id="caves" class="floor-card">
+          <span class="floor-icon" aria-hidden="true">🕯</span>
+          <h3 class="floor-name">The Caves / Catacombs</h3>
+          <span class="floor-lvl">Capítulo 2 — Niveles 3-4</span>
+          <p>
+            Las cuevas bajo el sótano. Más amplias, más peligrosas. Aparecen Spiders, Hoppers y enemigos que escupen veneno. Las Catacombs son la variante alternativa, con una atmósfera más necrológica y esqueletos que se reconstituyen.
+          </p>
+          <p style="margin-top:.75rem; font-size:.88rem; color:var(--blood);">
+            <strong>Jefe principal:</strong> Famine, Chub, Gurdy, Mega Maw
+          </p>
+        </article>
+
+        <article id="depths" class="floor-card">
+          <span class="floor-icon" aria-hidden="true">💀</span>
+          <h3 class="floor-name">The Depths / Necropolis</h3>
+          <span class="floor-lvl">Capítulo 3 — Niveles 5-6</span>
+          <p>
+            El límite entre la locura y la muerte. Los enemigos adoptan formas religiosas distorsionadas: monjes, calaveras voladoras, figuras que imploran. La Necropolis es su variante: un cementerio subterráneo donde los muertos no descansan.
+          </p>
+          <p style="margin-top:.75rem; font-size:.88rem; color:var(--blood);">
+            <strong>Jefe principal:</strong> Mom (primera vez), Pestilence, Monstro II
+          </p>
+        </article>
+
+        <article id="womb" class="floor-card">
+          <span class="floor-icon" aria-hidden="true">🫀</span>
+          <h3 class="floor-name">The Womb / Utero</h3>
+          <span class="floor-lvl">Capítulo 4 — Niveles 7-8</span>
+          <p>
+            El piso más perturbador antes del final. Las paredes son de carne palpitante, los suelos están cubiertos de sangre. Los enemigos son organismos biológicos: tumores, embriones, parásitos. Isaac está, literalmente, dentro de su madre.
+          </p>
+          <p style="margin-top:.75rem; font-size:.88rem; color:var(--blood);">
+            <strong>Jefe principal:</strong> Mom's Heart / It Lives
+          </p>
+        </article>
+
+        <article id="sheol" class="floor-card">
+          <span class="floor-icon" aria-hidden="true">😈</span>
+          <h3 class="floor-name">Sheol / The Cathedral</h3>
+          <span class="floor-lvl">Capítulo 5 — Nivel 9</span>
+          <p>
+            El camino se bifurca: Sheol es el infierno bíblico, el reino de los muertos. The Cathedral es el cielo, pero igualmente oscuro. Dos rutas, dos verdades. Sheol lleva a Satan. The Cathedral lleva a Isaac (como jefe final).
+          </p>
+          <p style="margin-top:.75rem; font-size:.88rem; color:var(--blood);">
+            <strong>Jefes:</strong> Satan (Sheol) / Isaac (Cathedral)
+          </p>
+        </article>
+
+        <article class="floor-card" style="border-color:var(--blood);">
+          <span class="floor-icon" aria-hidden="true">✝</span>
+          <h3 class="floor-name">The Chest / Dark Room</h3>
+          <span class="floor-lvl">Capítulo 6 — Final verdadero</span>
+          <p>
+            El destino último. The Chest se accede desde The Cathedral y lleva al Mega Satan o al cofre donde Isaac se esconde. Dark Room se accede desde Sheol. Aquí está el final más oscuro del juego: Isaac, solo, encerrado.
+          </p>
+          <p style="margin-top:.75rem; font-size:.88rem; color:var(--blood);">
+            <strong>Jefes:</strong> Mega Satan / ???
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ACORDEÓN — Detalles ampliados de cada piso -->
+  <section class="section section-alt" aria-labelledby="acc-title">
+    <div class="container">
+
+      <header class="sec-header">
+        <span class="sec-tag">Detalle</span>
+        <h2 id="acc-title" class="sec-title">Piso por Piso</h2>
+        <div class="sec-squiggle"></div>
+        <p class="sec-desc">Haz clic en cada capítulo para ver sus mecánicas en detalle.</p>
+      </header>
+
+      <!-- Acordeón CSS puro: radio buttons -->
+      <div class="acc-wrap" role="list">
+
+        <div class="acc-item" role="listitem">
+          <input type="radio" name="acc-floors" id="acc-b1" class="acc-radio" />
+          <label for="acc-b1" class="acc-label">
+            🪦 The Basement / Cellar <span class="acc-arrow" aria-hidden="true">▾</span>
+          </label>
+          <div class="acc-body">
+            <p><strong>Ambiente:</strong> Sótano doméstico húmedo. Cajas de cartón, barriles oxidados, telarañas. La música es lenta y opresiva.</p>
+            <p><strong>Enemigos únicos:</strong> Flies (moscas básicas), Pooters (moscas de gases), Hoppers (saltadores), Mulligans (hongos humanoides).</p>
+            <p><strong>Variante Cellar:</strong> Más seco, con hongos y cocoons. Los Clots (coágulos) son los enemigos característicos. Visualmente recuerda a un almacén abandonado.</p>
+            <p><strong>Secreto:</strong> En el Cellar aparece con más frecuencia la habitación del ángel y las tiendas ocultas. Los diablillos del Basement pueden dropetar el ítem <em>Small Rock</em>.</p>
+          </div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <input type="radio" name="acc-floors" id="acc-b2" class="acc-radio" />
+          <label for="acc-b2" class="acc-label">
+            🕯 The Caves / Catacombs <span class="acc-arrow" aria-hidden="true">▾</span>
+          </label>
+          <div class="acc-body">
+            <p><strong>Ambiente:</strong> Cavernas naturales, estalactitas, suelo irregular. La iluminación es escasa y las habitaciones tienen formas más irregulares.</p>
+            <p><strong>Enemigos únicos:</strong> Spiders, Rage Spiders, Clots, Wall Creeps. Los Leapers saltan por encima de obstáculos.</p>
+            <p><strong>Variante Catacombs:</strong> Un cementerio subterráneo. Lápidas, esqueletos (Bony) que se reconstruyen si no se destruye el esqueleto completo. Ambiente grisáceo y desolado.</p>
+            <p><strong>Jefe especial:</strong> Gurdy Jr. aparece en The Caves. Pestilence (Jinete del Apocalipsis) puede aparecer aquí como alternativa.</p>
+          </div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <input type="radio" name="acc-floors" id="acc-b3" class="acc-radio" />
+          <label for="acc-b3" class="acc-label">
+            💀 The Depths / Necropolis <span class="acc-arrow" aria-hidden="true">▾</span>
+          </label>
+          <div class="acc-body">
+            <p><strong>Ambiente:</strong> Ruinas de piedra. Columnas caídas, suelo de tierra oscura. Las paredes tienen grabados religiosos distorsionados.</p>
+            <p><strong>Enemigos únicos:</strong> Knights (caballeros con escudo), Masks &amp; Hearts (máscaras que protegen corazones vulnerables), Dips (excrementos animados).</p>
+            <p><strong>Necropolis:</strong> La variante más oscura. Necronomicon vibes. Los Torn y los Reveries aparecen aquí. Los jefes alternativos incluyen a The Bloat.</p>
+            <p><strong>Punto clave:</strong> Mom aparece al final del Nivel 6 la primera vez. Después de derrotarla, el juego continúa hacia The Womb con It Lives como nuevo guardián.</p>
+          </div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <input type="radio" name="acc-floors" id="acc-b4" class="acc-radio" />
+          <label for="acc-b4" class="acc-label">
+            🫀 The Womb / Utero / Scarred Womb <span class="acc-arrow" aria-hidden="true">▾</span>
+          </label>
+          <div class="acc-body">
+            <p><strong>Ambiente:</strong> El interior de un cuerpo humano. Paredes de carne rosácea-roja que laten. Suelo viscoso. Las habitaciones parecen órganos.</p>
+            <p><strong>Enemigos únicos:</strong> Embryos, Fistulas (órganos flotantes que se dividen), Moms (copias parciales de la madre). Los Camillo Jr. son fetos agresivos.</p>
+            <p><strong>Utero / Scarred Womb:</strong> Variantes con coloraciones más oscuras. La Scarred Womb (Repentance) tiene cicatrices visibles y enemigos más agresivos.</p>
+            <p><strong>Significado:</strong> Isaac está literalmente dentro del útero de su madre. Es la representación más directa del trauma del nacimiento y del miedo al origen.</p>
+          </div>
+        </div>
+
+        <div class="acc-item" role="listitem">
+          <input type="radio" name="acc-floors" id="acc-b5" class="acc-radio" />
+          <label for="acc-b5" class="acc-label">
+            😈 Sheol / The Cathedral / Dark Room / The Chest <span class="acc-arrow" aria-hidden="true">▾</span>
+          </label>
+          <div class="acc-body">
+            <p><strong>Sheol:</strong> Infierno bíblico. Ambiente volcánico, rojo y negro. Pentagrams y símbolos demoníacos en las paredes. Jefe: Satan en su forma completa.</p>
+            <p><strong>The Cathedral:</strong> Paradójicamente más oscuro que el infierno. Azul celeste grisáceo. Estatuas de ángeles rotos. Jefe: Isaac como entidad divina/demoníaca.</p>
+            <p><strong>Dark Room / The Chest:</strong> Los finales verdaderos. La Dark Room lleva al combate contra ??? (el yo más oscuro de Isaac). The Chest lleva al cofre donde está Isaac físicamente.</p>
+            <p><strong>Significado narrativo:</strong> La bifurcación representa las dos interpretaciones del juego: el niño que se vuelve monstruo (Sheol) vs. el niño que busca redención (Cathedral).</p>
+          </div>
+        </div>
+
+      </div><!-- /acc-wrap -->
+    </div>
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-rip" aria-hidden="true"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo" aria-label="Inicio">
+          <div class="isaac-face" aria-hidden="true" style="opacity:.7;">
+            <div class="if-head">
+              <div class="if-eyes"><span class="if-eye"></span><span class="if-eye"></span></div>
+              <div class="if-tears"><span class="if-tear"></span><span class="if-tear"></span></div>
+              <span class="if-mouth"></span>
+            </div>
+          </div>
+          <div class="logo-text">
+            <span class="logo-main" style="color:var(--p2);">The Binding</span>
+            <span class="logo-sub">of Isaac</span>
+          </div>
+        </a>
+        <p class="footer-tagline">Un sitio de fan hecho con lágrimas.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <h3>Páginas</h3>
+        <ul role="list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="PJS.html">Personajes</a></li>
+          <li><a href="pisos.html">Pisos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer-info">
+        <h3>Créditos</h3>
+        <p>Juego original de <strong>Edmund McMillen</strong></p>
+        <p class="footer-year">✝ 2011 — 2026 ✝</p>
+      </div>
+    </div>
+    <p class="footer-legal">The Binding of Isaac © Edmund McMillen &amp; Nicalis. Proyecto de fan no oficial.</p>
+  </div>
+</footer>
+
+</body>
+</html>

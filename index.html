@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="El diario de The Binding of Isaac — Historia, personajes, pisos y más." />
+  <title>The Binding of Isaac — Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Caveat:wght@400;600;700&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     FRANJA DE ENCUADERNACIÓN (decorativa, izquierda)
+     ============================================================ -->
+<div class="page-spine" aria-hidden="true"></div>
+<div class="spine-holes" aria-hidden="true">
+  <span></span><span></span><span></span>
+  <span></span><span></span><span></span>
+  <span></span><span></span>
+</div>
+
+<!-- ============================================================
+     HEADER
+     Técnica hamburguesa: <input type="checkbox"> + label + CSS
+     ============================================================ -->
+<header class="site-header" role="banner">
+
+  <!-- Checkbox que controla el menú en móvil -->
+  <input type="checkbox" id="nav-check" class="nav-check" aria-hidden="true" />
+
+  <div class="header-bar">
+
+    <!-- ── Logo (cabeza de Isaac en CSS) ── -->
+    <a href="index.html" class="site-logo" aria-label="The Binding of Isaac — Inicio">
+      <div class="isaac-face" aria-hidden="true" role="img" aria-label="Cabeza de Isaac llorando">
+        <div class="if-head">
+          <div class="if-eyes">
+            <span class="if-eye left"></span>
+            <span class="if-eye right"></span>
+          </div>
+          <div class="if-tears">
+            <span class="if-tear"></span>
+            <span class="if-tear"></span>
+          </div>
+          <span class="if-mouth"></span>
+        </div>
+      </div>
+      <div class="logo-text">
+        <span class="logo-main">The Binding</span>
+        <span class="logo-sub">of Isaac</span>
+      </div>
+    </a>
+
+    <!-- ── Botón hamburguesa ── -->
+    <label for="nav-check" class="hb-btn" aria-label="Abrir o cerrar menú">
+      <span class="hb-bar"></span>
+      <span class="hb-bar"></span>
+      <span class="hb-bar"></span>
+    </label>
+
+  </div><!-- /header-bar -->
+
+  <!-- ── Navegación principal ── -->
+  <nav class="main-nav" aria-label="Navegación principal">
+    <ul class="nav-list" role="list">
+
+      <!-- Home -->
+      <li class="nav-item">
+        <a href="index.html" class="nav-link active" aria-current="page">
+          <label for="nav-check">Inicio</label>
+        </a>
+      </li>
+
+      <!-- Personajes con dropdown -->
+      <li class="nav-item has-drop">
+        <a href="PJS.html" class="nav-link" aria-haspopup="true">
+          Personajes <span class="drop-arrow" aria-hidden="true">▾</span>
+        </a>
+        <ul class="drop-menu" role="list" aria-label="Submenú Personajes">
+          <li><a href="PJS.html#isaac"     class="drop-link">Isaac</a></li>
+          <li><a href="PJS.html#magdalene" class="drop-link">Magdalene</a></li>
+          <li><a href="PJS.html#cain"      class="drop-link">Cain</a></li>
+          <li><a href="PJS.html#judas"     class="drop-link">Judas</a></li>
+          <li><a href="PJS.html#eve"       class="drop-link">Eve</a></li>
+          <li><a href="PJS.html#samson"    class="drop-link">Samson</a></li>
+        </ul>
+      </li>
+
+      <!-- Pisos con dropdown -->
+      <li class="nav-item has-drop">
+        <a href="pisos.html" class="nav-link" aria-haspopup="true">
+          Pisos <span class="drop-arrow" aria-hidden="true">▾</span>
+        </a>
+        <ul class="drop-menu" role="list" aria-label="Submenú Pisos">
+          <li><a href="pisos.html#basement"    class="drop-link">The Basement</a></li>
+          <li><a href="pisos.html#caves"       class="drop-link">The Caves</a></li>
+          <li><a href="pisos.html#depths"      class="drop-link">The Depths</a></li>
+          <li><a href="pisos.html#womb"        class="drop-link">The Womb</a></li>
+          <li><a href="pisos.html#sheol"       class="drop-link">Sheol / Cathedral</a></li>
+        </ul>
+      </li>
+
+      <!-- Contacto -->
+      <li class="nav-item">
+        <a href="contacto.html" class="nav-link">
+          <label for="nav-check">Contacto</label>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+</header>
+
+<!-- Overlay oscuro al abrir el menú móvil -->
+<label for="nav-check" class="nav-overlay" aria-hidden="true"></label>
+
+
+<!-- ============================================================
+     MAIN
+     ============================================================ -->
+<main id="main-content">
+
+  <!-- ────────────────────────────────────────────────────────────
+       HERO
+       ──────────────────────────────────────────────────────────── -->
+  <section class="hero" aria-labelledby="hero-title">
+
+    <!-- Garabatos de fondo -->
+    <div class="hero-doodles" aria-hidden="true">
+      <span class="doodle d-cross">✝</span>
+      <span class="doodle d-skull">☠</span>
+      <span class="doodle d-heart">♥</span>
+      <span class="doodle d-star">★</span>
+      <span class="doodle d-eye">👁</span>
+    </div>
+
+    <!-- Costuras del diario -->
+    <div class="hero-spine" aria-hidden="true">
+      <span></span><span></span><span></span>
+      <span></span><span></span>
+    </div>
+
+    <div class="hero-body">
+      <p class="hero-eyebrow">El diario secreto de un niño perdido</p>
+      <h1 id="hero-title" class="hero-title">
+        The Binding<span>of Isaac</span>
+      </h1>
+      <p class="hero-desc">
+        Mamá escuchó una voz del cielo. Dijo que tenía que limpiarme del pecado.<br/>
+        Salté por la trampilla. Abajo, en el sótano, encontré mis miedos.<br/>
+        <strong>Y aprendí a llorar como arma.</strong>
+      </p>
+      <div class="hero-ctas">
+        <a href="#historia" class="btn btn-primary">Leer la Historia</a>
+        <a href="PJS.html"  class="btn btn-secondary">Ver Personajes</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ────────────────────────────────────────────────────────────
+       SECCIÓN 1 — HISTORIA DEL JUEGO
+       ──────────────────────────────────────────────────────────── -->
+  <section id="historia" class="section" aria-labelledby="historia-title">
+    <div class="container">
+
+      <header class="sec-header">
+        <span class="sec-tag">Capítulo I</span>
+        <h2 id="historia-title" class="sec-title">La Historia de Isaac</h2>
+        <div class="sec-squiggle"></div>
+      </header>
+
+      <div class="lore-grid">
+
+        <!-- Texto principal -->
+        <div class="lore-text">
+          <p>
+            <strong>Isaac</strong> es un niño que vive con su madre en lo alto de una colina apartada. Su vida es sencilla: dibuja, juega y mira televisión. Todo cambia el día en que su madre escucha una voz del cielo que le ordena demostrar su fe eliminando todo aquello que "corrompe" al niño.
+          </p>
+          <p>
+            Primero desaparecen sus juguetes. Luego su ropa. Finalmente, la voz exige algo más, y la madre avanza hacia la habitación de Isaac con un cuchillo. Desesperado, Isaac ve una trampilla en el suelo de su cuarto y salta hacia las tinieblas.
+          </p>
+          <p>
+            Lo que encuentra abajo es un sótano laberíntico, generado de forma procedural en cada partida, repleto de monstruos engendrados por su propia psique atormentada. Las lágrimas de Isaac se convierten en proyectiles. Los ítems que recoge son fragmentos de su infancia rota.
+          </p>
+          <p>
+            La historia está inspirada en el libro del <em>Génesis</em> bíblico, específicamente en el episodio en que Dios ordena a Abraham sacrificar a su hijo Isaac. Pero bajo esa capa religiosa hay algo más personal: el miedo de un niño a su propia madre, a la soledad y a las voces que no se callan.
+          </p>
+          <a href="pisos.html" class="link-ink">Explorar los pisos del sótano →</a>
+
+          <!-- Cita bíblica decorativa -->
+          <blockquote class="bible-quote" style="margin-top:2rem;">
+            <span class="bq-mark" aria-hidden="true">"</span>
+            <p>Toma ahora a tu hijo, tu único hijo Isaac, a quien amas, y ve a la tierra de Moriah y ofrécelo allí en holocausto.</p>
+            <span class="bq-mark close" aria-hidden="true">"</span>
+            <cite>— Génesis 22:2</cite>
+          </blockquote>
+        </div>
+
+        <!-- Aside: datos + post-it -->
+        <aside class="aside-stack">
+          <div class="data-card">
+            <h3 class="dc-title">Ficha del Juego</h3>
+            <dl class="dc-list">
+              <dt>Desarrollador</dt><dd>Edmund McMillen &amp; F. Himsl</dd>
+              <dt>Lanzamiento</dt> <dd>28 sep. 2011</dd>
+              <dt>Género</dt>      <dd>Roguelike / Acción</dd>
+              <dt>Engine</dt>      <dd>Flash (orig.) / Unity (Rebirth)</dd>
+              <dt>Plataformas</dt> <dd>PC, PS4, Switch, iOS…</dd>
+              <dt>Expansiones</dt> <dd>Rebirth · Afterbirth · Repentance</dd>
+            </dl>
+          </div>
+
+          <div class="postit">
+            <p>"No puedo dormir. Hay algo en el sótano. Algo que se parece a mí."</p>
+            <span class="postit-by">— Isaac, página 7</span>
+          </div>
+
+          <div class="note-card">
+            <p>"Dios me habló. Me dijo que todo lo mundano te aleja de Él. Que debo actuar."</p>
+            <cite>— La Madre</cite>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ────────────────────────────────────────────────────────────
+       SECCIÓN 2 — HISTORIA DEL DESARROLLO
+       ──────────────────────────────────────────────────────────── -->
+  <section id="desarrollo" class="section section-alt" aria-labelledby="dev-title">
+    <div class="container">
+
+      <header class="sec-header">
+        <span class="sec-tag">Entre Bastidores</span>
+        <h2 id="dev-title" class="sec-title">Cómo Nació el Juego</h2>
+        <div class="sec-squiggle"></div>
+        <p class="sec-desc">
+          La historia detrás de la historia: Edmund McMillen, 14 días de desarrollo y un juego que cambió los roguelikes para siempre.
+        </p>
+      </header>
+
+      <div class="lore-grid">
+
+        <div class="lore-text">
+          <p>
+            En 2011, <strong>Edmund McMillen</strong> acababa de terminar <em>Super Meat Boy</em> junto a Tommy Refenes. Agotado, quería hacer algo completamente diferente: pequeño, rápido, autobiográfico. El resultado fue <em>The Binding of Isaac</em>, prototipado en tan solo <strong>14 días</strong> junto al programador Florian Himsl usando Adobe Flash.
+          </p>
+          <p>
+            El concepto nació de dos fuentes simultáneas. Por un lado, la infancia del propio McMillen, marcada por una familia cristiana, miedos religiosos y una relación compleja con su madre. Por otro, su fascinación por la Biblia como fuente de horror puro: un libro lleno de sacrificios, mandatos divinos terribles y figuras que obedecen sin cuestionar.
+          </p>
+          <p>
+            McMillen ha descrito el juego como un proceso catártico: "<em>Hacer Isaac me ayudó a entender partes de mi niñez que había reprimido durante años. Cada ítem, cada jefe, cada final es un fragmento de algo real.</em>"
+          </p>
+
+          <div class="dev-timeline" aria-label="Línea de tiempo del desarrollo">
+
+            <div class="dev-entry">
+              <span class="dev-year">2011</span>
+              <div>
+                <h4>El Prototipo Original (Flash)</h4>
+                <p>McMillen e Himsl desarrollan el juego en 14 días. Se lanza en Steam a 5 dólares. En un mes supera las 450.000 copias vendidas, una cifra inaudita para un indie de esa época.</p>
+              </div>
+            </div>
+
+            <div class="dev-entry">
+              <span class="dev-year">2012</span>
+              <div>
+                <h4>Wrath of the Lamb</h4>
+                <p>Primera expansión que dobla el contenido: nuevos ítems, jefes, finales y la mecánica de los trinkets. La comunidad descubre que hay mucho más lore del que parecía a primera vista.</p>
+              </div>
+            </div>
+
+            <div class="dev-entry">
+              <span class="dev-year">2014</span>
+              <div>
+                <h4>Rebirth — El Renacimiento</h4>
+                <p>Nicalis y McMillen rehacen el juego desde cero en C++. Nueva engine, gráficos rediseñados, co-op local, más de 450 ítems. La versión Flash queda obsoleta. <em>Rebirth</em> es considerado uno de los mejores roguelikes de todos los tiempos.</p>
+              </div>
+            </div>
+
+            <div class="dev-entry">
+              <span class="dev-year">2015–17</span>
+              <div>
+                <h4>Afterbirth y Afterbirth+</h4>
+                <p>Dos expansiones que añaden greedmode, Booster Packs creados por la comunidad, Delirium como jefe final alternativo y el sistema de mods. El juego alcanza los 3 millones de copias.</p>
+              </div>
+            </div>
+
+            <div class="dev-entry">
+              <span class="dev-year">2021</span>
+              <div>
+                <h4>Repentance — El Final (por ahora)</h4>
+                <p>La expansión definitiva. Integra el contenido del mod <em>Antibirth</em> de la comunidad, añade más de 100 ítems nuevos, dos nuevos capítulos completos y el final canónico: Isaac en el cofre, recordando. Un final que cierra diez años de lore.</p>
+              </div>
+            </div>
+
+          </div><!-- /dev-timeline -->
+        </div>
+
+        <!-- Aside de desarrollo -->
+        <aside class="aside-stack">
+          <div class="data-card">
+            <h3 class="dc-title">En Números</h3>
+            <dl class="dc-list">
+              <dt>Días de desarrollo</dt> <dd>14 días (prototipo)</dd>
+              <dt>Precio original</dt>   <dd>$4.99 USD</dd>
+              <dt>Copias (2023)</dt>     <dd>+7 millones</dd>
+              <dt>Items en Repentance</dt><dd>+700 ítems</dd>
+              <dt>Finales</dt>           <dd>16+ finales</dd>
+              <dt>Jefes únicos</dt>      <dd>+100</dd>
+            </dl>
+          </div>
+
+          <div class="postit">
+            <p>"Quería hacer algo honesto. Algo que doliera un poco al jugarlo y un poco al haberlo hecho."</p>
+            <span class="postit-by">— Edmund McMillen, 2012</span>
+          </div>
+        </aside>
+
+      </div><!-- /lore-grid -->
+    </div>
+  </section>
+
+
+  <!-- ────────────────────────────────────────────────────────────
+       SECCIÓN 3 — ACCESOS RÁPIDOS A LAS PÁGINAS INTERNAS
+       ──────────────────────────────────────────────────────────── -->
+  <section class="section" aria-labelledby="explore-title">
+    <div class="container">
+
+      <header class="sec-header">
+        <span class="sec-tag">Explorar</span>
+        <h2 id="explore-title" class="sec-title">El Sótano te Espera</h2>
+        <div class="sec-squiggle"></div>
+      </header>
+
+      <!-- Reutilizamos el sistema de .char-grid como feature cards -->
+      <div class="char-grid">
+
+        <a href="PJS.html" class="char-card" style="text-decoration:none;">
+          <div class="char-img-wrap">
+            <img
+              src="imgns/isaaccry.webp"
+              alt="Galería de personajes de The Binding of Isaac"
+              loading="lazy"
+            />
+          </div>
+          <div class="char-body">
+            <h3 class="char-name">Personajes</h3>
+            <p class="char-desc">Isaac, Magdalene, Cain, Judas, Eve y más. Conoce sus stats iniciales, su lore y por qué cada uno existe.</p>
+          </div>
+        </a>
+
+        <a href="pisos.html" class="char-card" style="text-decoration:none;">
+          <div class="char-img-wrap">
+            <img
+              src="imgns/basement.webp"
+              alt="Los pisos y capítulos del sótano de Isaac"
+              loading="lazy"
+            />
+          </div>
+          <div class="char-body">
+            <h3 class="char-name">Pisos del Sótano</h3>
+            <p class="char-desc">Desde The Basement hasta Sheol y The Cathedral. Cada capítulo tiene su propio infierno, sus jefes y sus secretos.</p>
+          </div>
+        </a>
+
+        <a href="contacto.html" class="char-card" style="text-decoration:none;">
+          <div class="char-img-wrap">
+            <img
+              src="imgns/question.webp"
+              alt="Contacto — escribe en el diario de Isaac"
+              loading="lazy"
+            />
+          </div>
+          <div class="char-body">
+            <h3 class="char-name">Contacto</h3>
+            <p class="char-desc">¿Tienes algo que decir? Escríbelo en el diario. Isaac guarda todos los mensajes en el sótano, para siempre.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ────────────────────────────────────────────────────────────
+       SECCIÓN 4 — FORMULARIO DE RESEÑA / CONTACTO
+       Truco :target para el mensaje de éxito
+       ──────────────────────────────────────────────────────────── -->
+  <section id="feedback" class="section section-alt" aria-labelledby="feedback-title">
+    <div class="container">
+
+      <header class="sec-header">
+        <span class="sec-tag">Tu Voz</span>
+        <h2 id="feedback-title" class="sec-title">Deja tu Reseña</h2>
+        <div class="sec-squiggle"></div>
+        <p class="sec-desc">
+          ¿Has jugado? ¿Has llorado? ¿Has gritado al morir en el piso 1 sin ítems?<br/>
+          Cuéntanoslo. Isaac escucha desde el sótano.
+        </p>
+      </header>
+
+      <div class="form-wrap">
+
+        <!--
+          action="#feedback-ok" → al enviar, el navegador navega a #feedback-ok
+          → activa :target en CSS → muestra el mensaje de éxito
+        -->
+        <form
+          class="contact-form"
+          action="#feedback-ok"
+          method="get"
+          aria-label="Formulario de reseña del juego"
+          novalidate
+        >
+          <!-- Espiral decorativa de la libreta -->
+          <div class="form-spiral" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span>
+          </div>
+
+          <div class="form-fields">
+
+            <!-- Nombre -->
+            <div class="f-group">
+              <label for="f-nombre" class="f-label">Tu nombre</label>
+              <input
+                type="text" id="f-nombre" name="nombre"
+                class="f-input"
+                placeholder="¿Cómo te llamas, viajero?"
+                required minlength="2"
+                autocomplete="given-name"
+              />
+            </div>
+
+            <!-- Correo -->
+            <div class="f-group">
+              <label for="f-email" class="f-label">Correo electrónico</label>
+              <input
+                type="email" id="f-email" name="email"
+                class="f-input"
+                placeholder="tu@correo.com"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <!-- Puntuación — estrellas CSS puro (orden INVERSO en HTML) -->
+            <div class="f-group f-group--stars">
+              <span class="f-label" id="stars-lbl">Puntuación del juego</span>
+              <!--
+                Truco: los radios van de 5 a 1 en el DOM,
+                el contenedor usa flex-direction: row-reverse,
+                así "input:checked ~ label" colorea las estrellas correctas
+              -->
+              <div class="star-rating" role="radiogroup" aria-labelledby="stars-lbl">
+                <input type="radio" name="puntuacion" id="s5" value="5" /><label for="s5" title="5 — Obra maestra">★</label>
+                <input type="radio" name="puntuacion" id="s4" value="4" /><label for="s4" title="4 — Muy bueno">★</label>
+                <input type="radio" name="puntuacion" id="s3" value="3" /><label for="s3" title="3 — Bueno">★</label>
+                <input type="radio" name="puntuacion" id="s2" value="2" /><label for="s2" title="2 — Regular">★</label>
+                <input type="radio" name="puntuacion" id="s1" value="1" /><label for="s1" title="1 — Malo">★</label>
+              </div>
+            </div>
+
+            <!-- Comentarios -->
+            <div class="f-group f-group--full">
+              <label for="f-comentario" class="f-label">Tu comentario</label>
+              <textarea
+                id="f-comentario" name="comentario"
+                class="f-input f-textarea"
+                placeholder="Escribe tu reseña aquí… cuéntanos qué sentiste en el sótano."
+                rows="5" maxlength="800" required
+              ></textarea>
+              <span class="f-hint">Máx. 800 caracteres</span>
+            </div>
+
+            <!-- Botón de envío -->
+            <div class="f-group f-group--submit">
+              <button type="submit" class="btn btn-primary btn-submit" style="width:100%;font-size:1.05rem;padding:.7em 1.5em;">
+                Escribir en el Diario ✝
+              </button>
+            </div>
+
+          </div><!-- /form-fields -->
+        </form>
+
+        <!-- Mensaje de éxito — visible solo con :target -->
+        <div id="feedback-ok" class="success-overlay" role="status" aria-live="polite" tabindex="-1">
+          <div style="max-width:420px;">
+            <span class="suc-icon" aria-hidden="true">♥</span>
+            <h3>¡Gracias por tu reseña!</h3>
+            <p>
+              Isaac ha añadido tus palabras a las páginas arrugadas de su diario.<br/>
+              Serán guardadas en las profundidades del sótano para siempre.
+            </p>
+            <a href="#feedback" class="btn btn-secondary">Volver al formulario</a>
+          </div>
+        </div>
+
+      </div><!-- /form-wrap -->
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-rip" aria-hidden="true"></div>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- Marca -->
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo footer-logo-link" aria-label="Inicio">
+          <div class="isaac-face" aria-hidden="true" style="opacity:.7;">
+            <div class="if-head">
+              <div class="if-eyes"><span class="if-eye"></span><span class="if-eye"></span></div>
+              <div class="if-tears"><span class="if-tear"></span><span class="if-tear"></span></div>
+              <span class="if-mouth"></span>
+            </div>
+          </div>
+          <div class="logo-text">
+            <span class="logo-main" style="color:var(--p2);">The Binding</span>
+            <span class="logo-sub">of Isaac</span>
+          </div>
+        </a>
+        <p class="footer-tagline">Un sitio de fan hecho con lágrimas<br/>y demasiadas horas en el sótano.</p>
+      </div>
+
+      <!-- Nav -->
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <h3>Páginas</h3>
+        <ul role="list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="PJS.html">Personajes</a></li>
+          <li><a href="pisos.html">Pisos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Info -->
+      <div class="footer-info">
+        <h3>Créditos</h3>
+        <p>Juego original de<br/><strong>Edmund McMillen</strong></p>
+        <p>Publicado por <strong>Nicalis</strong></p>
+        <p>Sitio fan, sin fines comerciales.</p>
+        <p class="footer-year">✝ 2011 — 2026 ✝</p>
+      </div>
+
+    </div>
+
+    <p class="footer-legal">
+      The Binding of Isaac © Edmund McMillen &amp; Nicalis. Este es un proyecto de fan no oficial. Todos los derechos sobre el juego pertenecen a sus creadores.
+    </p>
+
+  </div>
+</footer>
+
+</body>
+</html>

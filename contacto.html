@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacto — The Binding of Isaac. Escríbenos, reporta errores o deja tu reseña." />
+  <title>Contacto — The Binding of Isaac</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Caveat:wght@400;600;700&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ENCUADERNACIÓN -->
+<div class="page-spine" aria-hidden="true"></div>
+<div class="spine-holes" aria-hidden="true">
+  <span></span><span></span><span></span>
+  <span></span><span></span><span></span>
+  <span></span><span></span>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <input type="checkbox" id="nav-check" class="nav-check" aria-hidden="true" />
+  <div class="header-bar">
+    <a href="index.html" class="site-logo" aria-label="The Binding of Isaac — Inicio">
+      <div class="isaac-face" aria-hidden="true">
+        <div class="if-head">
+          <div class="if-eyes"><span class="if-eye left"></span><span class="if-eye right"></span></div>
+          <div class="if-tears"><span class="if-tear"></span><span class="if-tear"></span></div>
+          <span class="if-mouth"></span>
+        </div>
+      </div>
+      <div class="logo-text">
+        <span class="logo-main">The Binding</span>
+        <span class="logo-sub">of Isaac</span>
+      </div>
+    </a>
+    <label for="nav-check" class="hb-btn" aria-label="Abrir o cerrar menú">
+      <span class="hb-bar"></span><span class="hb-bar"></span><span class="hb-bar"></span>
+    </label>
+  </div>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <ul class="nav-list" role="list">
+      <li class="nav-item"><a href="index.html" class="nav-link"><label for="nav-check">Inicio</label></a></li>
+      <li class="nav-item has-drop">
+        <a href="PJS.html" class="nav-link" aria-haspopup="true">
+          Personajes <span class="drop-arrow" aria-hidden="true">▾</span>
+        </a>
+        <ul class="drop-menu" role="list">
+          <li><a href="PJS.html#isaac"     class="drop-link">Isaac</a></li>
+          <li><a href="PJS.html#magdalene" class="drop-link">Magdalene</a></li>
+          <li><a href="PJS.html#cain"      class="drop-link">Cain</a></li>
+          <li><a href="PJS.html#judas"     class="drop-link">Judas</a></li>
+          <li><a href="PJS.html#eve"       class="drop-link">Eve</a></li>
+          <li><a href="PJS.html#samson"    class="drop-link">Samson</a></li>
+        </ul>
+      </li>
+      <li class="nav-item has-drop">
+        <a href="pisos.html" class="nav-link" aria-haspopup="true">
+          Pisos <span class="drop-arrow" aria-hidden="true">▾</span>
+        </a>
+        <ul class="drop-menu" role="list">
+          <li><a href="pisos.html#basement" class="drop-link">The Basement</a></li>
+          <li><a href="pisos.html#caves"    class="drop-link">The Caves</a></li>
+          <li><a href="pisos.html#depths"   class="drop-link">The Depths</a></li>
+          <li><a href="pisos.html#womb"     class="drop-link">The Womb</a></li>
+          <li><a href="pisos.html#sheol"    class="drop-link">Sheol / Cathedral</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a href="contacto.html" class="nav-link active" aria-current="page"><label for="nav-check">Contacto</label></a></li>
+    </ul>
+  </nav>
+</header>
+<label for="nav-check" class="nav-overlay" aria-hidden="true"></label>
+
+
+<main id="main-content">
+
+  <!-- HERO de página -->
+  <section class="hero" style="min-height:36vh;" aria-labelledby="contact-hero-title">
+    <div class="hero-doodles" aria-hidden="true">
+      <span class="doodle d-heart" style="opacity:.08;">♥</span>
+      <span class="doodle d-star" style="opacity:.07;">★</span>
+    </div>
+    <div class="hero-body">
+      <p class="hero-eyebrow">El Diario Acepta Cartas</p>
+      <h1 id="contact-hero-title" class="hero-title" style="font-size:clamp(2.4rem,8vw,5rem);">
+        Contacto<span>&amp; Soporte</span>
+      </h1>
+      <p class="hero-desc" style="font-size:1rem;">
+        ¿Encontraste un error? ¿Quieres sugerir algo? ¿Solo quieres hablar del juego?<br/>
+        Isaac guarda todas las cartas en el sótano.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- INFO + FORMULARIO -->
+  <section class="section" aria-labelledby="contact-form-title">
+    <div class="container">
+
+      <!-- Grid de 2 columnas iguales en desktop, 1 columna en móvil -->
+      <div class="contact-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items:start;">
+
+        <!-- Columna izquierda: info de contacto -->
+        <div class="lore-text">
+
+          <header class="sec-header" style="text-align:left;">
+            <span class="sec-tag">Escríbenos</span>
+            <h2 id="contact-form-title" class="sec-title" style="font-size:2rem;">Deja tu Mensaje</h2>
+            <div class="sec-squiggle" style="margin-inline:0;"></div>
+          </header>
+
+          <p style="margin-top:1.5rem;">
+            Este es un sitio de fan, creado con amor por jugadores para jugadores. Si encontraste información incorrecta, quieres colaborar con contenido, o simplemente necesitas hablar de cuántas veces moriste contra Mom, este es el lugar.
+          </p>
+          <p>
+            Todos los mensajes son leídos. Las respuestas pueden tardar, porque a veces caemos en <em>The Womb</em> sin ítems y no hay manera de salir rápido.
+          </p>
+
+          <!-- Información de contacto como tarjetas -->
+          <div style="display:flex;flex-direction:column;gap:1rem;margin-top:1.5rem;">
+
+            <div class="note-card" style="transform:rotate(-.8deg);">
+              <p style="color:var(--ink0);">📬 Errores y correcciones de contenido</p>
+              <cite>Usa el formulario con asunto "Corrección"</cite>
+            </div>
+
+            <div class="note-card" style="transform:rotate(.6deg);">
+              <p style="color:var(--ink0);">✍️ Colaborar con el sitio</p>
+              <cite>Menciónalo en tus comentarios — lo evaluamos</cite>
+            </div>
+
+            <div class="note-card" style="transform:rotate(-.4deg);">
+              <p style="color:var(--ink0);">💬 Charla general sobre el juego</p>
+              <cite>El formulario de reseña también sirve para eso</cite>
+            </div>
+
+          </div>
+
+          <!-- FAQ rápido -->
+          <div style="margin-top:2rem;">
+            <h3 style="font-size:1.2rem;color:var(--blood);margin-bottom:1rem;">Preguntas Frecuentes</h3>
+
+            <div class="acc-wrap" role="list">
+              <div class="acc-item" role="listitem">
+                <input type="radio" name="faq" id="faq1" class="acc-radio" />
+                <label for="faq1" class="acc-label">¿De dónde vienen los datos del sitio? <span class="acc-arrow">▾</span></label>
+                <div class="acc-body"><p>Toda la información proviene del juego oficial, la wiki de The Binding of Isaac y las declaraciones públicas de Edmund McMillen. Es un proyecto de fan sin ánimo de lucro.</p></div>
+              </div>
+              <div class="acc-item" role="listitem">
+                <input type="radio" name="faq" id="faq2" class="acc-radio" />
+                <label for="faq2" class="acc-label">¿Tienen redes sociales? <span class="acc-arrow">▾</span></label>
+                <div class="acc-body"><p>Por ahora no. Si el sitio crece, lo consideraremos. De momento, el formulario es la única vía de contacto disponible.</p></div>
+              </div>
+              <div class="acc-item" role="listitem">
+                <input type="radio" name="faq" id="faq3" class="acc-radio" />
+                <label for="faq3" class="acc-label">¿Actualizan el contenido? <span class="acc-arrow">▾</span></label>
+                <div class="acc-body"><p>Sí, aunque lentamente. El objetivo es cubrir todos los personajes, pisos, ítems y finales de <em>Repentance</em> eventualmente. Las colaboraciones son bienvenidas.</p></div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /lore-text -->
+
+        <!-- Columna derecha: formulario -->
+        <aside>
+          <div class="form-wrap" style="max-width:100%; width:100%;">
+
+            <form
+              class="contact-form"
+              action="#contact-ok"
+              method="get"
+              aria-label="Formulario de contacto"
+              novalidate
+            >
+              <div class="form-spiral" aria-hidden="true">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span>
+              </div>
+
+              <div class="form-fields" style="grid-template-columns:1fr; padding-right: var(--s5);">
+
+                <!-- Nombre -->
+                <div class="f-group">
+                  <label for="c-nombre" class="f-label">Tu nombre</label>
+                  <input type="text" id="c-nombre" name="nombre" class="f-input" placeholder="¿Cómo te llamas?" required minlength="2" autocomplete="given-name" />
+                </div>
+
+                <!-- Correo -->
+                <div class="f-group">
+                  <label for="c-email" class="f-label">Correo electrónico</label>
+                  <input type="email" id="c-email" name="email" class="f-input" placeholder="tu@correo.com" required autocomplete="email" />
+                </div>
+
+                <!-- Asunto -->
+                <div class="f-group">
+                  <label for="c-asunto" class="f-label">Asunto</label>
+                  <select id="c-asunto" name="asunto" class="f-input" required>
+                    <option value="" disabled selected>Selecciona un asunto…</option>
+                    <option value="error">Corrección de contenido</option>
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="colaboracion">Quiero colaborar</option>
+                    <option value="charla">Charla sobre el juego</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+
+                <!-- Puntuación del sitio -->
+                <div class="f-group f-group--stars">
+                  <span class="f-label" id="site-stars">¿Cómo valorarías el sitio?</span>
+                  <div class="star-rating" role="radiogroup" aria-labelledby="site-stars">
+                    <input type="radio" name="valoracion" id="vs5" value="5" /><label for="vs5" title="5 — Excelente">★</label>
+                    <input type="radio" name="valoracion" id="vs4" value="4" /><label for="vs4" title="4 — Muy bueno">★</label>
+                    <input type="radio" name="valoracion" id="vs3" value="3" /><label for="vs3" title="3 — Bueno">★</label>
+                    <input type="radio" name="valoracion" id="vs2" value="2" /><label for="vs2" title="2 — Regular">★</label>
+                    <input type="radio" name="valoracion" id="vs1" value="1" /><label for="vs1" title="1 — Malo">★</label>
+                  </div>
+                </div>
+
+                <!-- Mensaje -->
+                <div class="f-group">
+                  <label for="c-mensaje" class="f-label">Tu mensaje</label>
+                  <textarea id="c-mensaje" name="mensaje" class="f-input f-textarea" placeholder="Escribe aquí tu mensaje…" rows="6" maxlength="1000" required></textarea>
+                  <span class="f-hint">Máx. 1000 caracteres</span>
+                </div>
+
+                <!-- Submit -->
+                <div class="f-group f-group--submit">
+                  <button type="submit" class="btn btn-primary" style="width:100%;font-size:1.05rem;padding:.7em 1.5em;">
+                    Enviar Carta ✉
+                  </button>
+                </div>
+
+              </div>
+            </form>
+
+            <!-- Mensaje de éxito :target -->
+            <div id="contact-ok" class="success-overlay" role="status" aria-live="polite" tabindex="-1">
+              <div style="max-width:380px;">
+                <span class="suc-icon" aria-hidden="true">✉</span>
+                <h3>¡Mensaje enviado!</h3>
+                <p>Isaac ha recogido tu carta del fondo del sótano.<br/>La guardará junto a sus dibujos, para siempre.</p>
+                <a href="#contact-form-title" class="btn btn-secondary" style="margin-top:.5rem;">Enviar otro mensaje</a>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div><!-- /contact-grid -->
+
+      <style>
+        @media (max-width: 760px) {
+          .contact-grid { grid-template-columns: 1fr !important; }
+        }
+      </style>
+    </div>
+  </section>
+
+
+  <!-- BLOQUE EXTRA: nota sobre el proyecto -->
+  <section class="section section-alt" aria-labelledby="about-title">
+    <div class="container" style="max-width:680px;">
+
+      <header class="sec-header">
+        <span class="sec-tag">Sobre el Sitio</span>
+        <h2 id="about-title" class="sec-title">Un Proyecto de Fan</h2>
+        <div class="sec-squiggle"></div>
+      </header>
+
+      <div class="lore-text" style="text-align:center;">
+        <p>
+          Este sitio es un <strong>proyecto de fan no oficial</strong> creado con amor al lore de <em>The Binding of Isaac</em>. No está afiliado, ni patrocinado, ni respaldado por Edmund McMillen ni por Nicalis Inc.
+        </p>
+        <p>
+          Todo el contenido del juego, los personajes, los ítems y las imágenes oficiales son propiedad intelectual de sus respectivos dueños. Aquí solo se rinde homenaje.
+        </p>
+        <p>
+          Si eres Edmund McMillen y estás leyendo esto: <strong>gracias</strong>. Por el juego, por el lore, por todo.
+        </p>
+
+        <div class="postit" style="max-width:320px;margin:2rem auto 0;transform:rotate(-1.5deg);">
+          <p>"Hice este juego para hablar de cosas que no podía decir de otra manera."</p>
+          <span class="postit-by">— Edmund McMillen</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-rip" aria-hidden="true"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo" aria-label="Inicio">
+          <div class="isaac-face" aria-hidden="true" style="opacity:.7;">
+            <div class="if-head">
+              <div class="if-eyes"><span class="if-eye"></span><span class="if-eye"></span></div>
+              <div class="if-tears"><span class="if-tear"></span><span class="if-tear"></span></div>
+              <span class="if-mouth"></span>
+            </div>
+          </div>
+          <div class="logo-text">
+            <span class="logo-main" style="color:var(--p2);">The Binding</span>
+            <span class="logo-sub">of Isaac</span>
+          </div>
+        </a>
+        <p class="footer-tagline">Un sitio de fan hecho con lágrimas.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <h3>Páginas</h3>
+        <ul role="list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="PJS.html">Personajes</a></li>
+          <li><a href="pisos.html">Pisos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer-info">
+        <h3>Créditos</h3>
+        <p>Juego original de <strong>Edmund McMillen</strong></p>
+        <p class="footer-year">✝ 2011 — 2026 ✝</p>
+      </div>
+    </div>
+    <p class="footer-legal">The Binding of Isaac © Edmund McMillen &amp; Nicalis. Proyecto de fan no oficial.</p>
+  </div>
+</footer>
+
+</body>
+</html>
